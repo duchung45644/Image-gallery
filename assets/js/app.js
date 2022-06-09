@@ -54,7 +54,6 @@ var currentIndex = 0
 
 function showImg(images, index){
     currentIndex = index
-    console.log(images.length);
       // hide prev button in first image
     if(currentIndex == 0){
         prev.classList.add('hide')
