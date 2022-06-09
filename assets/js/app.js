@@ -44,10 +44,10 @@ function loadImg(target, numberImg) {
         }
     }
 
-    col_1.innerHTML = htmls_1 + htmls_3
-    col_2.innerHTML = htmls_2 + htmls_1
-    col_3.innerHTML = htmls_3 + htmls_4
-    col_4.innerHTML = htmls_4 + htmls_2
+    col_1.innerHTML = htmls_1
+    col_2.innerHTML = htmls_2
+    col_3.innerHTML = htmls_3
+    col_4.innerHTML = htmls_4
 }
 
 var currentIndex = 0
