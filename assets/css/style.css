@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* border: 1px solid */
+}
+
+.root{
+    position: relative;
+    background: #fafafa;
+    font-family:sans-serif;
+}
+
+.nav{
+    position: sticky;
+    top: 100px;
+    width: 100px;
+}
+
+.nav-item{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:hover{
+    border-radius: 15px;
+    background: rgba(155, 206, 235, 0.841);
+    cursor: pointer;
+}
+
+.nav img{
+    width: 75%;
+}
+
+p{
+    line-height: 40px;
+}
+
+.row{
+    margin-top: -300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+
+.column{
+    flex: 25%;
+    max-width: 25%;
+}
+
+.img-item{
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.img-item img{
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.img-item:hover img{
+    transform: scale(1.2);
+}
+
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .row{
+        padding: 0 100px;
+    }
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+      
+    .nav{
+        top: 100px;
+        width: 60px;
+    }
+    .nav-item{
+        height: 60px;
+    }
+    .row{
+        padding: 0 50px;
+    }
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  
+.gallery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+
+	opacity: 0;
+	pointer-events: none;
+	transform: scale(0.8);
+	transition: 0.25s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery.show {
+	opacity: 1;
+	pointer-events: auto;
+	transform: scale(1);
+}
+
+.gallery-inner {
+	height: 80%;
+}
+
+.gallery-inner img{
+	height: 100%;
+}
+
+.control {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 50px;
+	cursor: pointer;
+}
+
+.prev {
+	left: 15px;
+}
+
+.next {
+	right: 15px;
+}
+
+.close {
+	color: white;
+	font-size: 35px;
+	position: fixed;
+	top: 15px;
+	right: 25px;
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
